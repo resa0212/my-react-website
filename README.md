@@ -1,3 +1,75 @@
+# Stampy - Digital Loyalty Cards
+
+A modern web application for Stampy, a digital loyalty card platform that helps businesses create loyalty programs customers love.
+
+## Available Deployment Options
+
+### Option 1: GitHub Pages
+
+1. Create a GitHub repository for your project
+2. Install GitHub Pages package:
+   ```
+   npm install --save gh-pages
+   ```
+
+3. Add these scripts to your `package.json`:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
+
+4. Add homepage field to `package.json`:
+   ```json
+   "homepage": "https://yourusername.github.io/my-react-website"
+   ```
+
+5. Deploy the website:
+   ```
+   npm run deploy
+   ```
+
+### Option 2: Netlify
+
+1. Create a Netlify account at https://www.netlify.com/
+2. Build your project:
+   ```
+   npm run build
+   ```
+3. Drag and drop your build folder to Netlify's dashboard
+   
+   OR
+   
+   Connect your GitHub repository for continuous deployment
+
+### Option 3: Vercel
+
+1. Create a Vercel account at https://vercel.com/
+2. Install Vercel CLI:
+   ```
+   npm install -g vercel
+   ```
+3. Deploy your project:
+   ```
+   vercel
+   ```
+
+## Local Development
+
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
+2. Start the development server:
+   ```
+   npm start
+   ```
+
+3. Build for production:
+   ```
+   npm run build
+   ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
