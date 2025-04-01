@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaStore, FaQrcode, FaMobileAlt, FaPalette, FaUsers, FaArrowRight, FaEnvelope } from 'react-icons/fa';
+import { FaStore, FaQrcode, FaMobileAlt, FaPalette, FaUsers, FaArrowRight, FaEnvelope, FaChartLine } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 import translations from '../translations';
 
@@ -78,7 +78,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#38bdf8]/20 to-[#0ea5e9]/20 rounded-full blur-3xl"></div>
                 <div className="relative bg-[#1E293B] rounded-2xl p-3 shadow-2xl rotate-3 transform-gpu w-[280px] sm:w-[320px] border border-gray-700">
                   <img
-                    src="/484646089_2089156948230045_4554784514395838675_n.jpg"
+                    src={`${process.env.PUBLIC_URL}/484646089_2089156948230045_4554784514395838675_n.jpg`}
                     alt="Stampy App Preview"
                     className="rounded-xl w-full"
                   />
@@ -149,11 +149,7 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 right-0 transform -translate-y-1/2 w-1/2 h-1/2 bg-gradient-to-l from-[#38bdf8]/5 to-transparent rounded-full filter blur-3xl"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -161,68 +157,113 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="gradient-text">{t.featuresHighlight[language]}</span>
+            <h2 className="text-4xl font-bold mb-4 text-[#38BDF8]">
+              Funksjoner
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t.featuresHighlightSubtitle[language]}
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Alt du trenger for å administrere ditt lojalitetsprogram
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="card-hover glass p-8 rounded-xl"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-[#38bdf8]/20 to-[#0ea5e9]/20 w-12 h-12 rounded-lg flex items-center justify-center text-[#38bdf8] text-xl mr-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">
-                    {index === 0 ? t.feature1Title[language] : t.feature2Title[language]}
-                  </h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  {index === 0 ? t.feature1Description[language] : t.feature2Description[language]}
-                </p>
-                
-                <ul className="space-y-3">
-                  {feature.bullets.map((bullet, bulletIndex) => (
-                    <motion.li
-                      key={bulletIndex}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: bulletIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start text-gray-300"
-                    >
-                      <div className="text-[#38bdf8] mr-2 mt-1">•</div>
-                      <span>
-                        {language === 'no' ? 
-                          (index === 0 ? 
-                            bulletIndex === 0 ? 'Tilpassede farger og temaer' :
-                            bulletIndex === 1 ? 'Fleksible stempelkort-layouter' :
-                            bulletIndex === 2 ? 'Merkevareprofilerte butikksider' :
-                            'Tilpassbare belønningsbeskjeder'
-                          : 
-                            bulletIndex === 0 ? 'Ett-klikks stempelsamling' :
-                            bulletIndex === 1 ? 'Rask QR-kodeskanning' :
-                            bulletIndex === 2 ? 'Intuitiv butikkadministrasjon' :
-                            'Sanntidssporing av stempler'
-                          )
-                        : bullet}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Tilpassede Kort */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaPalette className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Tilpassede Kort</h3>
+              <p className="text-gray-400 mb-6">Skap merkevareprofilerte lojalitetskort som passer til din bedrifts identitet</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Tilpassede farger og temaer
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Fleksible stempelkort-layouter
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Merkevareprofilerte butikksider
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Tilpassbare belønningsbeskjeder
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Enkel Distribusjon */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaMobileAlt className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Enkel Distribusjon</h3>
+              <p className="text-gray-400 mb-6">Del kort via QR-koder, e-post, SMS eller sosiale medier</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Ett-klikks stempelsamling
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Rask QR-kodeskanning
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Intuitiv butikkadministrasjon
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Sanntidssporing av stempler
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Verdifull kundestatistikk */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaChartLine className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Verdifull kundestatistikk</h3>
+              <p className="text-gray-400 mb-6">Få innsikt i kundeadferd og lojalitetsprogrammets effektivitet</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Detaljerte rapporter
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Kundeengasjement-analyse
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Belønningseffektivitet
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Trendanalyse og prognoser
+                </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>

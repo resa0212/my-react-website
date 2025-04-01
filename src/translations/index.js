@@ -107,8 +107,8 @@ const translations = {
       en: 'Ready to get started?'
     },
     readyToStartSubtitle: {
-      no: 'Prøv Stampy gratis i 30 dager og se hvordan det kan transformere din virksomhet',
-      en: 'Try Stampy free for 30 days and see how it can transform your business'
+      no: 'Prøv Stampy gratis i 14 dager for å se hvordan vi passer til din virksomhet',
+      en: 'Try Stampy free for 14 days to see how we can help your business'
     },
     startFreeTrial: {
       no: 'Start Gratis Prøveperiode',
@@ -248,23 +248,19 @@ const translations = {
     },
     businessDescription: {
       no: 'Lag og administrer ditt lojalitetsprogram med vår brukervennlige plattform',
-      en: 'Create and manage your loyalty program with our easy-to-use platform'
+      en: 'Create and manage your loyalty program with our user-friendly platform'
     },
     customerDescription: {
       no: 'Samle og administrer dine lojalitetskort med vår gratis mobilapp',
       en: 'Collect and manage your loyalty cards with our free mobile app'
     },
     businessDashboard: {
-      no: 'Bedriftsdashboard App',
-      en: 'Business Dashboard App'
+      no: 'Bedriftsadministrasjon',
+      en: 'Business Dashboard'
     },
     posApp: {
-      no: 'Salgspunkt App',
-      en: 'Point-of-Sale App'
-    },
-    alsoAvailable: {
-      no: 'Også tilgjengelig for desktop:',
-      en: 'Also available for desktop:'
+      no: 'POS-app',
+      en: 'POS App'
     },
     downloadForiOS: {
       no: 'Last ned for iOS',
@@ -274,73 +270,85 @@ const translations = {
       no: 'Last ned for Android',
       en: 'Download for Android'
     },
+    alsoAvailable: {
+      no: 'Også tilgjengelig for:',
+      en: 'Also available for:'
+    },
     scanQRCode: {
-      no: 'Skann QR-kode for å laste ned:',
-      en: 'Scan QR code to download:'
+      no: 'Skann QR-kode:',
+      en: 'Scan QR code:'
     },
     gettingStarted: {
       no: 'Kom i Gang',
       en: 'Getting Started'
     },
     gettingStartedSubtitle: {
-      no: 'Følg disse enkle trinnene for å sette opp ditt digitale lojalitetsprogram',
-      en: 'Follow these simple steps to set up your digital loyalty program'
+      no: 'Følg disse enkle trinnene for å begynne med Stampy',
+      en: 'Follow these simple steps to get started with Stampy'
     },
     businessSteps: {
       no: [
-        "Last ned Stampy Bedriftsapp",
-        "Opprett bedriftskontoen din",
-        "Sett opp din butikkprofil",
-        "Lag ditt første lojalitetskort",
-        "Generer QR-koder for kortene dine",
-        "Begynn å samle stempler!"
+        'Opprett en konto på vår bedriftsplattform',
+        'Tilpass ditt lojalitetskort med ditt merke',
+        'Definer belønninger og kampanjer',
+        'Installer POS-appen på din enhet',
+        'Del kortet ditt med kunder via QR-kode'
       ],
       en: [
-        "Download the Stampy Business App",
-        "Create your business account",
-        "Set up your store profile",
-        "Create your first loyalty card",
-        "Generate QR codes for your cards",
-        "Start collecting stamps!"
+        'Create an account on our business platform',
+        'Customize your loyalty card with your branding',
+        'Define rewards and campaigns',
+        'Install the POS app on your device',
+        'Share your card with customers via QR code'
       ]
     },
     customerSteps: {
       no: [
-        "Last ned Stampy Kundeapp",
-        "Opprett kontoen din",
-        "Finn deltakende butikker",
-        "Legg til lojalitetskort i samlingen din",
-        "Skann QR-koder for å samle stempler",
-        "Løs inn belønningene dine!"
+        'Last ned Stampy-appen fra app-butikken',
+        'Opprett en konto eller logg inn',
+        'Skann QR-koden til bedriftens lojalitetskort',
+        'Vis appen ved kjøp for å samle stempler',
+        'Løs inn belønninger når de er opptjent'
       ],
       en: [
-        "Download the Stampy Customer App",
-        "Create your account",
-        "Find participating stores",
-        "Add loyalty cards to your collection",
-        "Scan QR codes to collect stamps",
-        "Redeem your rewards!"
+        'Download the Stampy app from the app store',
+        'Create an account or log in',
+        'Scan the QR code of the business loyalty card',
+        'Show the app when purchasing to collect stamps',
+        'Redeem rewards when earned'
       ]
     },
     needHelp: {
-      no: 'Trenger du Hjelp?',
+      no: 'Trenger du hjelp?',
       en: 'Need Help?'
     },
     supportDescription: {
-      no: 'Vårt supportteam er alltid klare til å hjelpe deg med spørsmål eller problemer.',
-      en: 'Our support team is always ready to assist you with any questions or issues.'
+      no: 'Kontakt vårt støtteteam for spørsmål eller assistanse',
+      en: 'Contact our support team for questions or assistance'
     },
     contactSupport: {
-      no: 'Kontakt Support',
+      no: 'Kontakt Kundestøtte',
       en: 'Contact Support'
+    },
+    emailUs: {
+      no: 'Send Oss E-post',
+      en: 'Email Us'
     },
     supportEmail: {
       no: 'support@stampy.no',
       en: 'support@stampy.no'
     },
-    emailUs: {
-      no: 'Send oss en e-post',
-      en: 'Email us'
+    downloadNow: {
+      no: 'Last Ned Nå',
+      en: 'Download Now'
+    },
+    systemRequirements: {
+      no: 'Systemkrav',
+      en: 'System Requirements'
+    },
+    windowsVersions: {
+      no: 'Windows 10/11',
+      en: 'Windows 10/11'
     }
   }
 };

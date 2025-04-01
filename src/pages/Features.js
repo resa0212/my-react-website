@@ -12,13 +12,8 @@ const Features = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[10%] left-[5%] w-[60%] h-[40%] bg-gradient-to-r from-[#38bdf8]/10 to-transparent rounded-full filter blur-[120px]"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto relative">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -26,51 +21,123 @@ const Features = () => {
             className="text-center mb-16"
           >
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold mb-6 text-[#38BDF8]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <span className="gradient-text">{t.heroTitle[language]}</span>
+              Funksjoner
             </motion.h1>
             <motion.p 
-              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              className="text-xl text-gray-400 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {t.heroSubtitle[language]}
+              Alt du trenger for å administrere ditt lojalitetsprogram
             </motion.p>
           </motion.div>
-          
-          {/* Feature Cards - Primary Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            {primaryFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="card-hover glass p-8 rounded-xl text-center"
-              >
-                <div className="bg-gradient-to-r from-[#38bdf8]/20 to-[#0ea5e9]/20 w-16 h-16 rounded-xl flex items-center justify-center text-[#38bdf8] text-2xl mx-auto mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {index === 0 ? t.feature1Title[language] : 
-                   index === 1 ? t.feature2Title[language] : 
-                   index === 2 ? t.feature3Title[language] : 
-                   t.feature4Title[language]}
-                </h3>
-                <p className="text-gray-300">
-                  {index === 0 ? t.feature1Description[language] : 
-                   index === 1 ? t.feature2Description[language] : 
-                   index === 2 ? t.feature3Description[language] : 
-                   t.feature4Description[language]}
-                </p>
-              </motion.div>
-            ))}
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {/* Tilpassede Kort */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaPalette className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Tilpassede Kort</h3>
+              <p className="text-gray-400 mb-6">Skap merkevareprofilerte lojalitetskort som passer til din bedrifts identitet</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Tilpassede farger og temaer
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Fleksible stempelkort-layouter
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Merkevareprofilerte butikksider
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Tilpassbare belønningsbeskjeder
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Enkel Distribusjon */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaMobileAlt className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Enkel Distribusjon</h3>
+              <p className="text-gray-400 mb-6">Del kort via QR-koder, e-post, SMS eller sosiale medier</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Ett-klikks stempelsamling
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Rask QR-kodeskanning
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Intuitiv butikkadministrasjon
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Sanntidssporing av stempler
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Verdifull kundestatistikk */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-[#1E293B]/50 backdrop-blur-xl p-8 rounded-xl border border-gray-700/50 hover:border-[#38BDF8]/30 transition-colors"
+            >
+              <div className="bg-[#38BDF8]/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <FaChartLine className="text-[#38BDF8] text-2xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Verdifull kundestatistikk</h3>
+              <p className="text-gray-400 mb-6">Få innsikt i kundeadferd og lojalitetsprogrammets effektivitet</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Detaljerte rapporter
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Kundeengasjement-analyse
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Belønningseffektivitet
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#38BDF8] mr-2">•</span>
+                  Trendanalyse og prognoser
+                </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -96,7 +163,7 @@ const Features = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {detailedFeatures.map((feature, index) => (
+            {detailedFeatures.slice(0, 2).map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -110,7 +177,7 @@ const Features = () => {
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white">
-                    {index === 0 || index === 2 
+                    {index === 0 
                       ? t.forBusinesses[language] 
                       : t.forCustomers[language]}
                   </h3>
@@ -120,11 +187,7 @@ const Features = () => {
                   {language === 'no' 
                     ? index === 0 
                       ? 'Alle funksjonene en bedrift trenger for å administrere et vellykket lojalitetsprogram.'
-                      : index === 1
-                        ? 'Enkle og brukervennlige funksjoner som kundene vil elske.'
-                        : index === 2
-                          ? 'Kraftige verktøy for å holde bedriften din organisert og effektiv.'
-                          : 'Sikker plattform som prioriterer både bedrifts- og kundeinformasjon.'
+                      : 'Enkle og brukervennlige funksjoner som kundene vil elske.'
                     : feature.description}
                 </p>
                 
@@ -150,33 +213,15 @@ const Features = () => {
                                 : bulletIndex === 3
                                   ? t.businessFeature4[language]
                                   : t.businessFeature5[language])
-                          : index === 1
-                            ? (bulletIndex === 0 
-                              ? t.customerFeature1[language]
-                              : bulletIndex === 1
-                                ? t.customerFeature2[language]
-                                : bulletIndex === 2
-                                  ? t.customerFeature3[language]
-                                  : bulletIndex === 3
-                                    ? t.customerFeature4[language]
-                                    : t.customerFeature5[language])
-                            : language === 'no'
-                              ? (index === 2
-                                ? (bulletIndex === 0 
-                                  ? 'Kundedata og profiler'
-                                  : bulletIndex === 1
-                                    ? 'Kjøpshistorikk'
-                                    : bulletIndex === 2
-                                      ? 'Lojalitetsnivåer'
-                                      : 'VIP-programalternativer')
-                                : (bulletIndex === 0 
-                                  ? 'Ende-til-ende-kryptering'
-                                  : bulletIndex === 1
-                                    ? 'Sikker autentisering'
-                                    : bulletIndex === 2
-                                      ? 'Datasikkerhetskopi'
-                                      : 'GDPR-kompatibel'))
-                              : bullet
+                          : (bulletIndex === 0 
+                            ? t.customerFeature1[language]
+                            : bulletIndex === 1
+                              ? t.customerFeature2[language]
+                              : bulletIndex === 2
+                                ? t.customerFeature3[language]
+                                : bulletIndex === 3
+                                  ? t.customerFeature4[language]
+                                  : t.customerFeature5[language])
                         }
                       </span>
                     </motion.li>

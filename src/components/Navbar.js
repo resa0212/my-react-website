@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center group">
               <div className="relative overflow-hidden bg-[#0F172A] p-1.5 rounded-lg shadow-md mr-2">
                 <img
-                  src="/484646089_2089156948230045_4554784514395838675_n.jpg"
+                  src={`${process.env.PUBLIC_URL}/484646089_2089156948230045_4554784514395838675_n.jpg`}
                   alt="Stampy Logo"
                   className="h-7 w-7 rounded-md transition-transform group-hover:scale-110"
                 />
