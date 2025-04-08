@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Features from './pages/Features';
 import Download from './pages/Download';
+import Privacy from './pages/Privacy';
 import './App.css';
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/features" element={<Features />} />
               <Route path="/download" element={<Download />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Routes>
           </div>
         </div>

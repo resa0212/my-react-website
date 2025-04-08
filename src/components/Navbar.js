@@ -53,6 +53,9 @@ const Navbar = () => {
               <NavLink to="/download" isActive={location.pathname === "/download"}>
                 {translations.navbar.download[language]}
               </NavLink>
+              <NavLink to="/privacy" isActive={location.pathname === "/privacy"}>
+                {translations.navbar.privacy[language]}
+              </NavLink>
               <Link 
                 to="/download" 
                 className="ml-4 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-all hover:shadow-lg hover:translate-y-[-2px]"
@@ -99,6 +102,9 @@ const Navbar = () => {
               </MobileNavLink>
               <MobileNavLink to="/download" onClick={() => setIsOpen(false)} isActive={location.pathname === "/download"}>
                 {translations.navbar.download[language]}
+              </MobileNavLink>
+              <MobileNavLink to="/privacy" onClick={() => setIsOpen(false)} isActive={location.pathname === "/privacy"}>
+                {translations.navbar.privacy[language]}
               </MobileNavLink>
               <div className="pt-2">
                 <Link

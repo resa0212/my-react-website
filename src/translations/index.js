@@ -14,6 +14,10 @@ const translations = {
       no: 'Last Ned',
       en: 'Download'
     },
+    privacy: {
+      no: 'Personvern',
+      en: 'Privacy'
+    },
     getStarted: {
       no: 'Kom i Gang',
       en: 'Get Started'
@@ -349,6 +353,162 @@ const translations = {
     windowsVersions: {
       no: 'Windows 10/11',
       en: 'Windows 10/11'
+    }
+  },
+  
+  // Privacy page translations
+  privacy: {
+    title: {
+      no: 'Personvernregler',
+      en: 'Privacy Policy'
+    },
+    lastUpdated: {
+      no: 'Sist oppdatert',
+      en: 'Last updated'
+    },
+    introduction: {
+      title: {
+        no: '1. Introduksjon',
+        en: '1. Introduction'
+      },
+      content: {
+        no: 'Velkommen til våre personvernregler. Dette dokumentet forklarer hvordan vi samler inn, bruker og beskytter din personlige informasjon når du bruker applikasjonen vår. Vi er forpliktet til å sikre at ditt personvern er beskyttet og at du forstår hvordan dataene dine blir brukt.',
+        en: 'Welcome to our Privacy Policy. This document explains how we collect, use, and protect your personal information when you use our application. We are committed to ensuring that your privacy is protected and that you understand how your data is being used.'
+      }
+    },
+    informationCollection: {
+      title: {
+        no: '2. Informasjon Vi Samler Inn',
+        en: '2. Information We Collect'
+      },
+      intro: {
+        no: 'Vi samler inn følgende typer informasjon:',
+        en: 'We collect the following types of information:'
+      },
+      personalInfo: {
+        no: 'Personlig informasjon: Dette kan inkludere navn, e-postadresse og enhetsinformasjon.',
+        en: 'Personal Information: This may include your name, email address, and device information.'
+      },
+      usageData: {
+        no: 'Bruksdata: Informasjon om hvordan du bruker applikasjonen, inkludert tilgjengelige funksjoner og tid brukt.',
+        en: 'Usage Data: Information about how you use our application, including features accessed and time spent.'
+      },
+      deviceInfo: {
+        no: 'Enhetsinformasjon: Enhetstype, operativsystem, unike enhetsidentifikatorer og mobilnettverksinformasjon.',
+        en: 'Device Information: Device type, operating system, unique device identifiers, and mobile network information.'
+      }
+    },
+    dataUsage: {
+      title: {
+        no: '3. Hvordan Vi Bruker Din Informasjon',
+        en: '3. How We Use Your Information'
+      },
+      intro: {
+        no: 'Vi bruker den innsamlede informasjonen til følgende formål:',
+        en: 'We use the collected information for the following purposes:'
+      },
+      purposes: {
+        no: [
+          'Å levere og vedlikeholde tjenesten vår',
+          'Å varsle deg om endringer i tjenesten vår',
+          'Å gi kundestøtte',
+          'Å samle analyse eller verdifull informasjon for å forbedre tjenesten vår'
+        ],
+        en: [
+          'To provide and maintain our service',
+          'To notify you about changes to our service',
+          'To provide customer support',
+          'To gather analysis or valuable information to improve our service'
+        ]
+      }
+    },
+    dataStorage: {
+      title: {
+        no: '4. Datalagring og Sikkerhet',
+        en: '4. Data Storage and Security'
+      },
+      content: {
+        no: 'Vi implementerer passende sikkerhetstiltak for å beskytte din personlige informasjon. Dataene dine lagres sikkert og vi gjennomgår regelmessig våre sikkerhetspraksiser for å sikre at informasjonen din forblir beskyttet.',
+        en: 'We implement appropriate security measures to protect your personal information. Your data is stored securely and we regularly review our security practices to ensure your information remains protected.'
+      }
+    },
+    dataSharing: {
+      title: {
+        no: '5. Datedeling og Utlevering',
+        en: '5. Data Sharing and Disclosure'
+      },
+      intro: {
+        no: 'Vi selger ikke din personlige informasjon. Vi kan dele din informasjon med:',
+        en: 'We do not sell your personal information. We may share your information with:'
+      },
+      sharing: {
+        no: [
+          'Tjenesteleverandører som hjelper med å drive tjenesten vår',
+          'Lovhåndhevelse når det kreves ved lov'
+        ],
+        en: [
+          'Service providers who assist in operating our service',
+          'Law enforcement when required by law'
+        ]
+      }
+    },
+    userRights: {
+      title: {
+        no: '6. Dine Rettigheter',
+        en: '6. Your Rights'
+      },
+      intro: {
+        no: 'Du har rett til å:',
+        en: 'You have the right to:'
+      },
+      rights: {
+        no: [
+          'Få tilgang til din personlige informasjon',
+          'Korrigere unøyaktige data',
+          'Be om sletting av dine data',
+          'Velge bort markedsføringskommunikasjon'
+        ],
+        en: [
+          'Access your personal information',
+          'Correct inaccurate data',
+          'Request deletion of your data',
+          'Opt-out of marketing communications'
+        ]
+      }
+    },
+    childrenPrivacy: {
+      title: {
+        no: '7. Barns Personvern',
+        en: '7. Children\'s Privacy'
+      },
+      content: {
+        no: 'Vår tjeneste er ikke ment for bruk av barn under 13 år. Vi samler ikke bevisst inn personlig informasjon fra barn under 13.',
+        en: 'Our service is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13.'
+      }
+    },
+    policyChanges: {
+      title: {
+        no: '8. Endringer i Denne Personvernregelen',
+        en: '8. Changes to This Privacy Policy'
+      },
+      content: {
+        no: 'Vi kan oppdatere våre personvernregler fra tid til annen. Vi vil varsle deg om eventuelle endringer ved å legge ut den nye personvernregelen på denne siden og oppdatere "Sist oppdatert"-datoen.',
+        en: 'We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.'
+      }
+    },
+    contact: {
+      title: {
+        no: '9. Kontakt Oss',
+        en: '9. Contact Us'
+      },
+      intro: {
+        no: 'Hvis du har spørsmål om denne personvernregelen, vennligst kontakt oss på:',
+        en: 'If you have any questions about this Privacy Policy, please contact us at:'
+      },
+      email: {
+        no: 'E-post: kontakt@stampy.no',
+        en: 'Email: kontakt@stampy.no'
+      }
     }
   }
 };
